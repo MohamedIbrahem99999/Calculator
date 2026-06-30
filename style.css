@@ -1,3 +1,4 @@
+
 *{
     margin:0;
     padding:0;
@@ -10,7 +11,7 @@ body{
     justify-content:center;
     align-items:center;
     min-height:100vh;
-     background: #333;
+    background:#333;
     padding:20px;
 }
 
@@ -43,18 +44,17 @@ body{
     border-radius:10px;
     border:2px solid rgba(255,255,255,.2);
     padding:15px;
-    font-size:2rem;
     text-align:right;
+    font-size:2rem;
     color:#000;
 }
 
-.calculator .key{
+.key{
     position:relative;
     display:flex;
     justify-content:center;
     align-items:center;
-    width:100%;
-    aspect-ratio:1/1;
+    aspect-ratio:1;
     cursor:pointer;
     user-select:none;
     color:#fff;
@@ -67,7 +67,7 @@ body{
         10px 20px 25px rgba(0,0,0,.4);
 }
 
-.calculator .key::before{
+.key::before{
     content:"";
     position:absolute;
     top:3px;
@@ -76,60 +76,59 @@ body{
     bottom:3px;
     border-radius:8px;
     background:linear-gradient(90deg,#2d2d2d,#4d4d4d);
-    border:1px solid rgba(255,255,255,.2);
-    z-index:0;
+    border:1px solid rgba(255,255,255,.15);
 }
 
-.calculator .key i{
+.key i{
     position:relative;
-    z-index:1;
+    z-index:2;
     font-style:normal;
     font-size:2rem;
-    text-transform:uppercase;
 }
 
-.calculator .key:active{
-    transform:scale(.95);
-    filter:brightness(1.2);
+.key:active{
+    transform:scale(.96);
+   
+    filter: brightness(1.5);
+
 }
 
-/* زر Clear */
+/* زر C */
 
-.calculator [data-val="clear"]{
+[data-val="clear"]{
     grid-column:span 2;
     aspect-ratio:auto;
     height:80px;
     background:#f00;
 }
 
-.calculator [data-val="clear"]::before{
+[data-val="clear"]::before{
     background:linear-gradient(90deg,#d20000,#ff7300);
-}
-
-/* زر = */
-
-.calculator [data-val="equal"]{
-    background:#006400;
-}
-
-.calculator [data-val="equal"]::before{
-    background:linear-gradient(90deg,#005000,#00a000);
 }
 
 /* زر + */
 
-.calculator [data-val="+"]{
+.plus{
     grid-row:span 2;
     aspect-ratio:auto;
 }
 
-/* Tablet */
+/* زر = */
 
-@media (max-width:768px){
+.equal{
+    background:#006400;
+}
+
+.equal::before{
+    background:linear-gradient(90deg,#005000,#00a000);
+}
+
+/* Responsive */
+
+@media(max-width:768px){
 
     .con{
         max-width:380px;
-        padding:20px;
     }
 
     .value{
@@ -137,27 +136,19 @@ body{
         font-size:1.8rem;
     }
 
-    .calculator .key i{
-        font-size:1.7rem;
-    }
-
-    .calculator [data-val="clear"]{
-        height:70px;
+    .key i{
+        font-size:1.6rem;
     }
 }
 
-/* Mobile */
-
-@media (max-width:480px){
+@media(max-width:480px){
 
     body{
         padding:10px;
     }
 
     .con{
-        width:100%;
         padding:15px;
-        border-radius:15px;
     }
 
     .calculator{
@@ -167,36 +158,13 @@ body{
     .value{
         height:70px;
         font-size:1.5rem;
-        padding:10px;
     }
 
-    .calculator .key i{
-        font-size:1.4rem;
+    .key i{
+        font-size:1.3rem;
     }
 
-    .calculator [data-val="clear"]{
+    [data-val="clear"]{
         height:60px;
-    }
-}
-
-/* Small phones */
-
-@media (max-width:350px){
-
-    .calculator{
-        gap:6px;
-    }
-
-    .value{
-        height:60px;
-        font-size:1.2rem;
-    }
-
-    .calculator .key i{
-        font-size:1.2rem;
-    }
-
-    .calculator [data-val="clear"]{
-        height:55px;
     }
 }
