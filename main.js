@@ -1,4 +1,4 @@
-alert("محمد ابراهيم يرحب بكم");
+alert("محمد ابراهيم يرحب بكم , Mohamed Ibrahem Welcomes You.");
 
 let valueTxt = document.getElementById("value");
 let keys = document.querySelectorAll(".btn");
