@@ -27,7 +27,7 @@ body {
         inset 5px 5px 15px rgba(0, 0, 0, .5) !important;
 }
 
-.calculator {
+.calculater {
     position: relative;
     display: grid;
 }
@@ -53,7 +53,7 @@ body {
 }
 
 
-.calculator .key {
+.calculater .key {
     position: relative;
     display: grid;
     place-items: center;
@@ -73,18 +73,18 @@ body {
     border-radius: 10px;
 }
 
-.calculator .key:active {
+.calculater .key:active {
     filter: brightness(1.5);
 }
 
-.calculator .key i {
+.calculater .key i {
     position: relative;
     font-style: normal;
     font-size: 40px !important;
     text-transfore: uppercase;
 }
 
-.calculator .key::before {
+.calculater .key::before {
     content: "";
     position: absolute;
     top: 3px;
@@ -103,28 +103,28 @@ body {
 }
 
 
-.calculator [data-val="clear"] {
+.calculater [data-val="clear"] {
     background: #f00;
     grid-column: span 2;
     width: 180px;
 }
 
-.calculator [data-val="clear"]::before {
+.calculater [data-val="clear"]::before {
     background: linear-gradient(90deg, #d20000, #d86b22) !important;
 }
 
-.calculator [data-val="equal"] {
+.calculater [data-val="equal"] {
     background: rgb(5, 54, 0);
     grid-column: span 1;
     /* width: 200px; */
 }
 
-.calculator [data-val="+"] {
+.calculater [data-val="+"] {
 
     grid-row: span 2;
     height: 180px;
 } 
 
-.calculator [data-val="equal"]::before {
+.calculater [data-val="equal"]::before {
     background: linear-gradient(90deg, #003f03, #006605) !important;
 }
