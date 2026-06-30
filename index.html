@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- <link rel="stylesheet" href="bootstrap.min.css">  -->
+
+    <link rel="stylesheet" href="all.min.css">
     <link rel="stylesheet" href="style.css">
+
     <title>Calculator</title>
 </head>
-
 <body>
 
-<div class="con">
-    <form class="calculator">
-      <input type="text" id="value" class="value" readonly>
+<div class="container">
 
-        <span class="key" data-val="clear"><i>C</i></span>
-        <span class="key" data-val="/"><i>/</i></span>
-        <span class="key" data-val="*"><i>*</i></span>
+    <div class="calculator">
 
-        <span class="key" data-val="7"><i>7</i></span>
-        <span class="key" data-val="8"><i>8</i></span>
-        <span class="key" data-val="9"><i>9</i></span>
-        <span class="key" data-val="-"><i>-</i></span>
+       <input type="text" class="display" id="value" readonly>
 
-        <span class="key" data-val="4"><i>4</i></span>
-        <span class="key" data-val="5"><i>5</i></span>
-        <span class="key" data-val="6"><i>6</i></span>
-        <span class="key plus" data-val="+"><i>+</i></span>
+<button class="btn clear" data-val="clear">C</button>
+<button class="btn back" data-val="back">
+    <i class="fa-solid fa-delete-left"></i>
+</button>
+<button class="btn operator divide" data-val="/">/</button>
 
-        <span class="key" data-val="1"><i>1</i></span>
-        <span class="key" data-val="2"><i>2</i></span>
-        <span class="key" data-val="3"><i>3</i></span>
+<button class="btn number" data-val="7">7</button>
+<button class="btn number" data-val="8">8</button>
+<button class="btn number" data-val="9">9</button>
+<button class="btn operator multiply" data-val="*">*</button>
 
-        <span class="key" data-val="0"><i>0</i></span>
-        <span class="key" data-val="."><i>.</i></span>
-        <span class="key equal" data-val="equal"><i>=</i></span>
+<button class="btn number" data-val="4">4</button>
+<button class="btn number" data-val="5">5</button>
+<button class="btn number" data-val="6">6</button>
+<button class="btn operator minus" data-val="-">-</button>
 
-    </form>
+<button class="btn number" data-val="1">1</button>
+<button class="btn number" data-val="2">2</button>
+<button class="btn number" data-val="3">3</button>
+<button class="btn plus" data-val="+">+</button>
+
+<button class="btn number zero" data-val="0">0</button>
+<button class="btn number" data-val=".">.</button>
+<button class="btn equal" data-val="equal">=</button>
+    </div>
+
 </div>
 
+<script src="main.js"></script>
 
-
-    <!-- <script src="../JS/bootstrap.bundle.min.js"></script> -->
-    <script src="main.js"></script>
 </body>
-
 </html>
