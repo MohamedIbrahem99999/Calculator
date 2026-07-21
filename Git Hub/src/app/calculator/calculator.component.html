@@ -1,0 +1,42 @@
+<div class="container">
+  <form class="calculator" (submit)="$event.preventDefault()">
+    <!-- شاشة العرض -->
+    <input 
+      type="text" 
+      name="value" 
+      id="value" 
+      class="display" 
+      [value]="displayValue" 
+      readonly 
+    />
+
+    <!-- الصف الأول -->
+    <button type="button" class="btn clear" (click)="onKeyClick('clear')">C</button>
+    <button type="button" class="btn back" (click)="onKeyClick('back')">⌫</button>
+    <button type="button" class="btn divide" (click)="onKeyClick('/')">/</button>
+
+    <!-- الصف الثاني -->
+    <button type="button" class="btn" (click)="onKeyClick('7')">7</button>
+    <button type="button" class="btn" (click)="onKeyClick('8')">8</button>
+    <button type="button" class="btn" (click)="onKeyClick('9')">9</button>
+    <button type="button" class="btn multiply" (click)="onKeyClick('*')">*</button>
+
+    <!-- الصف الثالث -->
+    <button type="button" class="btn" (click)="onKeyClick('4')">4</button>
+    <button type="button" class="btn" (click)="onKeyClick('5')">5</button>
+    <button type="button" class="btn" (click)="onKeyClick('6')">6</button>
+    <button type="button" class="btn minus" (click)="onKeyClick('-')">-</button>
+
+    <!-- الصف الرابع -->
+    <button type="button" class="btn" (click)="onKeyClick('1')">1</button>
+    <button type="button" class="btn" (click)="onKeyClick('2')">2</button>
+    <button type="button" class="btn" (click)="onKeyClick('3')">3</button>
+    <button type="button" class="btn plus" (click)="onKeyClick('+')">+</button>
+
+    <!-- الصف الخامس -->
+    <button type="button" class="btn" (click)="onKeyClick('0')">0</button>
+    <button type="button" class="btn" (click)="onKeyClick('00')">00</button>
+    <button type="button" class="btn" (click)="onKeyClick('.')">.</button>
+    <button type="button" class="btn equal" (click)="onKeyClick('equal')">=</button>
+  </form>
+</div>

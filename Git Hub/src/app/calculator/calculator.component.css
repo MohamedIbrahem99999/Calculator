@@ -1,0 +1,103 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: #2f2f2f;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow:
+    20px 20px 60px rgba(0, 0, 0, 0.45),
+    inset -5px -5px 10px rgba(0, 0, 0, 0.4),
+    inset 5px 5px 10px rgba(255, 255, 255, 0.05);
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 75px);
+  grid-auto-rows: 75px;
+  gap: 10px;
+}
+
+.display {
+  grid-column: 1 / 5;
+  height: 70px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: #c8cf9b;
+  padding: 15px;
+  font-size: 30px;
+  text-align: right;
+  color: #111;
+  box-sizing: border-box;
+}
+
+.btn {
+  position: relative;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 28px;
+  background: #3c3c3c;
+  box-shadow:
+    inset -2px -2px 5px rgba(0, 0, 0, 0.5),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.05),
+    0 3px 6px rgba(0, 0, 0, 0.4);
+  transition: 0.15s;
+}
+
+.btn:hover {
+  filter: brightness(1.15);
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+/* C Clear Button */
+.clear {
+  grid-column: span 2;
+  background: #f44336;
+}
+
+/* Back Button */
+.back {
+  background: #f4a300;
+}
+
+/* Operators */
+.divide,
+.multiply,
+.minus,
+.plus {
+  background: #3f3f3f;
+}
+
+/* Equal */
+.equal {
+  background: #009900;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .calculator {
+    grid-template-columns: repeat(4, 65px);
+    grid-auto-rows: 65px;
+    gap: 8px;
+  }
+
+  .display {
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .btn {
+    font-size: 24px;
+  }
+}
